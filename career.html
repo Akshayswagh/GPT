@@ -231,51 +231,10 @@
 
                         <!-- Main Menu End-->
                         <div class="outer-box clearfix">
-
-                            <!-- Cart Box -->
-                            <!-- <div class="cart-box">
-                    <div class="dropdown">
-                        <button class="cart-box-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flaticon-shopping-bag-1"></span><span class="total-cart">2</span></button>
-                        <div class="dropdown-menu pull-right cart-panel" aria-labelledby="dropdownMenu1">
-
-                            <div class="cart-product">
-                                <div class="inner">
-                                    <div class="cross-icon"><span class="icon fa fa-remove"></span></div>
-                                    <div class="image"><img src="images/resource/post-thumb-1.jpg" alt="" /></div>
-                                    <h3><a href="shop-single.html">Flying Ninja</a></h3>
-                                    <div class="quantity-text">Quantity 1</div>
-                                    <div class="price">$99.00</div>
-                                </div>
-                            </div>
-                            <div class="cart-product">
-                                <div class="inner">
-                                    <div class="cross-icon"><span class="icon fa fa-remove"></span></div>
-                                    <div class="image"><img src="images/resource/post-thumb-2.jpg" alt="" /></div>
-                                    <h3><a href="shop-single.html">Patient Ninja</a></h3>
-                                    <div class="quantity-text">Quantity 1</div>
-                                    <div class="price">$99.00</div>
-                                </div>
-                            </div>
-                            <div class="cart-total">Sub Total: <span>$198</span></div>
-                            <ul class="btns-boxed">
-                                <li><a href="shoping-cart.html">View Cart</a></li>
-                                <li><a href="checkout.html">CheckOut</a></li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-                 -->
-                            <!-- Search Btn -->
-                            <!-- <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div> -->
-
-                            <!-- Nav Btn -->
-                            <!-- <div class="nav-btn navSidebar-button"><span class="icon flaticon-menu-2"></span></div> -->
-
                             <!-- Quote Btn -->
                             <div class="btn-box">
                                 <a href="website-design-and-digital-marketing-company-in-pune.html"
-                                    class="theme-btn btn-style-one"><span class="txt">Get Customize Quote</span></a>
+                                    class="theme-btn btn-style-one"><span class="txt">Get In Touch</span></a>
                             </div>
 
                         </div>
@@ -595,53 +554,53 @@
         <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>-->
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content" style="background-image:url(images/overlay-white.png)">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel" style="color:black"><b>Apply Form </b></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="https://swapratechnologies.com/applymail.php" method="POST"
-                            enctype="multipart/form-data">
-                            <div class="form-group" style="margin-bottom: 0px;">
-                                <label for="recipient-name" class="col-form-label">Name:</label>
-                                <input type="text" class="form-control" name="name" required>
-                            </div>
-                            <div class="form-group" style="margin-bottom: 0px;">
-                                <label for="recipient-name" class="col-form-label">Email:</label>
-                                <input type="email" class="form-control" name="email" required>
-                            </div>
-                            <div class="form-group" style="margin-bottom: 0px;">
-                                <label for="recipient-name" class="col-form-label">Contact:</label>
-                                <input name="contact"
-                                    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);" type="tel"
-                                    class="form-control" required pattern="\d{10}"
-                                    title="Please enter exactly 10 digits.">
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background-image:url(images/overlay-white.png)">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color:black"><b>Apply Form </b></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="applicationForm" enctype="multipart/form-data">
+              <div class="form-group">
+                <label class="col-form-label">Name:</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Email:</label>
+                <input type="email" class="form-control" name="email" required>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Contact:</label>
+                <input name="contact" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);" type="tel"
+                  class="form-control" required pattern="\d{10}" title="Please enter exactly 10 digits.">
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Post:</label>
+                <input type="text" class="form-control" name="post" required>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Upload Resume:</label>
+                <input type="file" class="form-control" name="resume" id="resumeUpload" required>
+              </div>
+              <div class="form-gr                </div>oup">
+                <label class="col-form-label">Message:</label>
+                <textarea class="form-control" name="message" required></textarea>
+              </div>
+              <div class="modal-footer" style="justify-content:center">
+                <button type="submit" class="btn btn-primary">Send message</button>
+              </div>
+            </form>
+          </div>
 
-                                <!--<input type="text" class="form-control" name="contact" >-->
-                            </div>
-                            <div class="form-group" style="margin-bottom: 0px;">
-                                <label for="recipient-name" class="col-form-label">Post:</label>
-                                <input type="text" class="form-control" name="post" required>
-                            </div>
-                            <div class="form-group" style="margin-bottom: 0px;">
-                                <label for="recipient-name" class="col-form-label">Upload Resume:</label>
-                                <input type="file" class="form-control" name="resume" required>
-                            </div>
-                            <div class="form-group" style="margin-bottom: 0px;">
-                                <label for="message-text" class="col-form-label">Message:</label>
-                                <textarea class="form-control" name="messagee" required></textarea>
-                            </div>
-                            <div class="modal-footer" style="justify-content:center">
-                                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                                <button type="submit" class="btn btn-primary">Send message</button>
-                            </div>
-                        </form>
-                    </div>
+
+
+
+
+
 
                 </div>
             </div>
@@ -676,20 +635,20 @@
                           ><img src="images/log.png" alt="" width="70%"
                         /></a>
                       </div>
-                      <div class="text">
+                      <!-- <div class="text">
                         Every business has a beginning, and this is where you
                         talk about yours. People want to know what opportunity
                         you saw or how your passion led to the creation of
                         something new. Talk about your roots–people want to know
                         you have some.
-                      </div>
+                      </div> -->
                       <!-- Social Box -->
                       <ul class="social-box">
                         <li>
-                          <a
+                          <!-- <a
                             href=""
                             class="fa fa-facebook-f"
-                          ></a>
+                          ></a> -->
                         </li>
                         <li>
                           <a
@@ -869,6 +828,7 @@
         <a
           href="https://wa.me/919518355613?text=Hello,%20I%20am%20interested%20in%20your%20services.%20Share%20with%20me%20more%20details%20and%20call%20me."
           target="_blank"
+          
         >
           <button id="myBtn">
             <i class="fa fa-whatsapp" aria-hidden="true"></i>
@@ -922,10 +882,10 @@
                 }
             </style>
 
-            <a href="https://wa.me/919890655874?text=Hello,%20I%20am%20interested%20in%20your%20services.%20Share%20with%20me%20more%20details%20and%20call%20me."
+            <!-- <a href="https://wa.me/919890655874?text=Hello,%20I%20am%20interested%20in%20your%20services.%20Share%20with%20me%20more%20details%20and%20call%20me."
                 target="_blank">
                 <button id="myBtn"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
-            </a>
+            </a> -->
 
             <a href="tel:+919890655874" target="_blank">
                 <button id="myBtn1"><i class="fa fa-phone"></i></button>
@@ -957,6 +917,68 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/script.js"></script>
     <script src="js/color-settings.js"></script>
+    
+           <!-- Include EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/emailjs-com/3.2.0/email.min.js"></script>
+<script>
+  document.getElementById("applicationForm").addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+      const resumeFile = document.getElementById("resumeUpload").files[0];
+
+      if (!resumeFile) {
+          alert("Please upload a resume.");
+          return;
+      }
+
+      // 1. Upload Resume to Cloudinary
+      const cloudinaryUrl = "https://api.cloudinary.com/v1_1/dpsf7ynmr/upload";
+      const cloudinaryUploadPreset = "GPT career"; // Set in Cloudinary
+
+      const resumeUploadData = new FormData();
+      resumeUploadData.append("file", resumeFile);
+      resumeUploadData.append("upload_preset", cloudinaryUploadPreset);
+
+      try {
+          const response = await fetch(cloudinaryUrl, {
+              method: "POST",
+              body: resumeUploadData,
+          });
+
+          const cloudinaryData = await response.json();
+          const resumeUrl = cloudinaryData.secure_url;
+
+          // 2. Send Email with Form Data + Resume Link
+          emailjs.init("HMLMn-obXEkmJbyed"); // Get from EmailJS
+
+          const emailParams = {
+              name: formData.get("name"),
+              email: formData.get("email"),
+              contact: formData.get("contact"),
+              post: formData.get("post"),
+              message: formData.get("message"),
+              resume_link: resumeUrl,
+          };
+
+          emailjs.send("service_s2rfn1n", "template_jb35gp8", emailParams)
+              .then(() => {
+                  alert("Application submitted successfully!");
+                  document.getElementById("applicationForm").reset();
+              })
+              .catch((error) => console.error("Error sending email:", error));
+
+      } catch (error) {
+          console.error("Error uploading file:", error);
+      }
+  });
+</script>
+
+
 
 </body>
 

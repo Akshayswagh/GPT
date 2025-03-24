@@ -7,7 +7,7 @@
   /><!-- /Added by HTTrack -->
   <head>
     <meta charset="utf-8" />
-    <title>Swapra Technologies</title>
+    <title>GPT Softwares</title>
     <!-- Stylesheets -->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
@@ -893,9 +893,21 @@
                       Website Design-Development and Maintenance by
                       <a href="index.html" style="color: black"
                         ><b
-                          ><i><span style="color:#fdfdfd; font-size:20px;font-family: sans-serif;">GPT Software</span></i></b></a></p>
-                        </div>
-                      </div>
+                          ><i
+                            ><span
+                              style="
+                                color: #fdfdfd;
+                                font-size: 20px;
+                                font-family: sans-serif;
+                              "
+                              >GPT Software</span
+                            ></i
+                          ></b
+                        ></a
+                      >
+                    </p>
+                  </div>
+                </div>
                 <!-- Column -->
                 <!-- <div class="column col-lg-6 col-md-12 col-sm-12">
 								<ul class="footer-nav">
@@ -986,9 +998,75 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/script.js"></script>
     <script src="js/color-settings.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS Public Key
+      })();
+
+      async function uploadToCloudinary(file) {
+        const cloudName = "YOUR_CLOUD_NAME"; // Replace with your Cloudinary cloud name
+        const uploadPreset = "YOUR_UPLOAD_PRESET"; // Replace with your upload preset
+
+        let formData = new FormData();
+        formData.append("file", file);
+        formData.append("upload_preset", uploadPreset);
+
+        try {
+          let response = await fetch(
+            `https://api.cloudinary.com/v1_1/${cloudName}/upload`,
+            {
+              method: "POST",
+              body: formData,
+            }
+          );
+
+          let data = await response.json();
+          return data.secure_url; // Return the uploaded file's URL
+        } catch (error) {
+          console.error("Error uploading file:", error);
+          alert("Failed to upload resume. Try again!");
+          return null;
+        }
+      }
+
+      async function sendEmail(event) {
+        event.preventDefault();
+
+        let form = document.getElementById("contact-form");
+        let fileInput = document.querySelector("input[name='cv']");
+        let file = fileInput.files[0];
+
+        if (!file) {
+          alert("Please upload your resume!");
+          return;
+        }
+
+        // Upload file to Cloudinary first
+        let resumeUrl = await uploadToCloudinary(file);
+        if (!resumeUrl) return; // Stop if upload fails
+
+        let formData = {
+          username: form.username.value,
+          email: form.email.value,
+          phone: form.phone.value,
+          education: form.education.value,
+          skills: form.skills.value,
+          resume_url: resumeUrl, // Link to the uploaded resume
+        };
+
+        emailjs
+          .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData)
+          .then(function (response) {
+            alert("Email sent successfully!");
+            console.log("Success!", response.status, response.text);
+            form.reset(); // Clear form after submission
+          })
+          .catch(function (error) {
+            alert("Failed to send email. Try again!");
+            console.error("Failed...", error);
+          });
+      }
+    </script>
   </body>
-
-  <!-- Mirrored from expert-themes.com/html/globex/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Feb 2024 05:57:47 GMT -->
-
-  <!-- Mirrored from swapratechnologies.com/apply.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jan 2025 05:26:17 GMT -->
 </html>
