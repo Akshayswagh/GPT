@@ -92,6 +92,9 @@ body {
 	-moz-font-smoothing: antialiased;
 }
 
+.sticky-header .pull-right{
+	padding-top: 16px;
+}
 
 
 
@@ -10672,7 +10675,7 @@ img{
 
 .contact-info-section .info-column .inner-column{
 	position:relative;
-	padding:30px 30px;
+	padding:20px 20px;
 	box-shadow:0px 0px 20px rgba(0,0,0,0.10);
 }
 
