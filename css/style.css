@@ -101,6 +101,10 @@ body {
 	justify-content: space-between;
 }
 
+.service-block .inner-box{
+	height: 100%;
+}
+
 
 .bordered-layout .page-wrapper{
 	padding:0px 50px 0px;
