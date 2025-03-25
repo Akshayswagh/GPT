@@ -96,6 +96,10 @@ body {
 	padding-top: 16px;
 }
 
+.sticky-header .auto-container
+{
+	justify-content: space-between;
+}
 
 
 .bordered-layout .page-wrapper{
