@@ -896,6 +896,9 @@
           const cloudinaryData = await response.json();
           const resumeUrl = cloudinaryData.secure_url;
 
+          let optimizedUrl = resumeUrl.replace("/upload/", "/upload/f_auto,q_auto/");
+      // console.log("Optimized Resume URL:", optimizedUrl);
+
           // 2. Send Email with Form Data + Resume Link
           emailjs.init("HMLMn-obXEkmJbyed"); // Get from EmailJS
 
@@ -905,7 +908,7 @@
               contact: formData.get("contact"),
               post: formData.get("post"),
               message: formData.get("message"),
-              resume_link: resumeUrl,
+              resume_link: optimizedUrl,
           };
 
           emailjs.send("service_s2rfn1n", "template_jb35gp8", emailParams)
